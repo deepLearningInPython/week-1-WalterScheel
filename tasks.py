@@ -13,7 +13,8 @@ import numpy
 # Your code here:
 # -----------------------------------------------
 
-def step
+def step(x):
+    return 1 if x > 0 else -1
 
 
 # -----------------------------------------------
@@ -28,7 +29,8 @@ def step
 
 # Your code here:
 # -----------------------------------------------
-def ReLu
+def ReLu(array, cutoff = 0):
+    return np.maximum(array, cutoff)
 
 
 # -----------------------------------------------
@@ -44,7 +46,9 @@ def ReLu
 # Your code here:
 # -----------------------------------------------
 
-def neural_net_layer
+def neural_net_layer(matrix, vector):
+    result = np.dot(matrix, vector)
+    return ReLu(result)
 
 
 # ------------------------------------------
